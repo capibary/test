@@ -1,12 +1,15 @@
+class YotClub:
+    def __init__(self, cool):
+        self.cool_inv = 100 - cool
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakoint.
+    def get_cool(self):
+        return self.cool_inv
+
+    def change_cool(self, cool):
+        self.cool_inv = 100 - cool
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('000000000000')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
-print(444)
+res = YotClub(900)
+print(res.get_cool())
+res.change_cool(2345)
+print(res.get_cool())
